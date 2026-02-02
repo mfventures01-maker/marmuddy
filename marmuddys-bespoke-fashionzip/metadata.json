@@ -1,0 +1,7 @@
+{
+  "name": "Marmuddy's Bespoke Fashion",
+  "description": "A luxury e-commerce platform for bespoke tailoring, featuring African royalty fashion and contemporary masculine elegance.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

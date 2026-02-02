@@ -1,0 +1,20 @@
+You are an expert web developer specializing in luxury e-commerce sites with African fashion themes. I need you to modify the existing website code (HTML, CSS, JavaScript) for Marmuddy's Bespoke Fashion at https://697f2cf82f57c9e031fd081b--cosmic-beignet-d950b5.netlify.app/ to fix a critical bug and add new features.
+
+Current bug: When clicking on any product photo (e.g., in hero sections or carousels), it leads to a blank or broken image page/view. This needs to be corrected so clicks open a proper, immersive detail modal or lightbox with the full image and additional info.
+
+New requirements:
+- Implement lazy loading for all images site-wide (use native HTML loading="lazy" attribute where possible, or fallback to Intersection Observer JS for older browsers). This ensures optimal performance, especially on mobile.
+- Assume or create a JSON file (e.g., products.json) that contains product data. Structure it as an array of objects, each with: id, title (e.g., "Cashmere Long Sleeve Breast Pocket"), imageUrl (full path to high-res image), details (array of bullet points for complete specs like fabric, fit, heritage notes), price (number, e.g., 150000 in Naira), shortDescription (a calm, persuasive paragraph tying to African royalty luxury).
+- For each product photo: 
+  - Highlight optimally on hover/click: subtle scale-up (1.05x), soft gold glow border, and smooth transition (0.3s ease).
+  - On click: Open a modal/lightbox (use simple CSS/JS or library like lightbox2 if available in Replit) showing the full image, complete details (bulleted), price as "Commission Valuation: ₦[price]" in elegant gold styling, and the short description.
+- Short descriptions must use calm, persuasive language: Elegant, inviting tone emphasizing royalty, comfort, and exclusivity (e.g., "Embrace the serene elegance of this piece, where ancient African craftsmanship meets modern refinement, inviting you to adorn yourself in timeless luxury.").
+- Integrate data dynamically: Fetch the JSON via JS (fetch API), then render products in sections like hero carousel or editorial showroom. Ensure mobile responsiveness: modals full-screen on mobile, details stack vertically.
+- Preserve the site's overall aesthetic: Warm black background (#0C0A08), cream text (#F5F2EB), royal gold accents (#C9A561), subtle African motifs (micro-lines or textures as before).
+
+Steps to output:
+1. First, provide the sample products.json structure with 3-4 example entries based on screenshots (e.g., Cashmere Long Sleeve, White Collar Ash Native, Artisanal Legacy).
+2. Then, update the main HTML/JS/CSS to fetch JSON, apply lazy loading, fix click behavior with modals, and render details/prices/descriptions.
+3. Make sure everything is performant, accessible (ARIA labels for modals/images), and tested for mobile.
+
+Output the full updated code (index.html with embedded style/script, or separate files). Thank you!

@@ -1,0 +1,54 @@
+You are an expert luxury fashion web designer with deep knowledge of African-inspired high-end aesthetics. I need you to completely overhaul and modernize the existing website code (HTML, CSS, JavaScript) for Marmuddy's Bespoke Fashion — a premier African wardrobe assemblage platform.
+
+Current site problems to fix:
+- Extremely oversized typography that breaks on mobile (headings are way too big, cause overflow or tiny scaling)
+- Harsh pure black (#000000) background + bright white text → feels cold and aggressive
+- Layout is desktop-oriented (side-by-side image + massive text); not truly mobile responsive
+- Prices/valuations feel flat; no luxury glow or exclusivity
+- Overall vibe is dramatic but not calming/comforting/regal enough for African royalty luxury
+- No subtle cultural heritage integration — needs quiet, non-cliché African motifs
+
+New design direction — "Calming Cinematic African Royalty Luxury":
+- Mobile-first: Everything must look perfect and breathable on phones (375–414px). Use vertical stacking (image full-width on top, then text/content below).
+- Use fluid/responsive typography with clamp(): headings never exceed reasonable mobile sizes.
+- Softer, warmer color palette:
+  - Main background: deep warm black #0C0A08 or #11100D
+  - Primary text: soft warm cream/off-white #F5F2EB or #EDE6D8
+  - Accent gold: richer, deeper royal gold #C9A561 or #D4A017 (warmer version)
+  - Secondary accents: subtle deep burgundy #4A1C2C or soft terracotta #8B5A2B (use very sparingly)
+- Typography hierarchy:
+  - Headings (e.g. "WHITE COLLAR", "CASHMERE LONG SLEEVE..."): Cinzel or similar elegant serif, clamp(2.4rem, 7vw, 4.8rem), line-height 0.95–1.0, font-weight bold/700–900
+  - Subheadings/details: Cormorant Garamond or similar, clamp(1.4rem, 4.5vw, 2.2rem), italic where appropriate
+  - Body/small text: 1.1rem–1.3rem base, good line-height 1.6
+- Layout improvements:
+  - Hero/masterpiece sections: Full-width image or mannequin photo on top (mobile), subtle zoom or parallax on scroll (desktop only, performance-friendly)
+  - Text blocks stack vertically on mobile; use generous padding/margins (4–8vh/vw)
+  - Navigation: Sticky or fixed header with hamburger on mobile; elegant gold underline/hover on links
+- Price/Commission Valuation display:
+  - Show as elegant boxed element with soft gold border/glow (box-shadow with rgba gold)
+  - Text: larger gold/cream, subtle hover scale or background intensification
+  - Label it "Commission Valuation" in small uppercase gold
+- Subtle non-cliché African motifs integration:
+  - Micro-geometric line work: very thin (0.5–1px) gold lines inspired by abstracted Kente/Uli/Adire rhythms — use as faint horizontal rules, low-opacity grid overlay (~5–8%), or slow-draw SVG on scroll/hover
+  - Negative-space gold accents: tiny carved-out royal shapes (e.g. abstracted sankofa curve or bead rhythm) in corners of cards or behind big type (very low opacity)
+  - Texture: subtle warm paper-like grain or handwoven ribbing simulation (CSS noise/gradient, not loud print)
+  - On hover: grayscale-to-warm-gold motif fade-in at 10–20% opacity on product images
+- Effects & animations (calming, not overwhelming):
+  - Smooth fade-ins and gentle slide-ups on scroll (Intersection Observer, 0.6–0.8s ease)
+  - Subtle scale (1.02–1.05) and glow on interactive elements
+  - No aggressive zoom-fade carousel if it hurts performance; prefer gentle crossfade or static hero with parallax
+  - Optional "Minimal Mode" toggle to disable animations
+- Other luxury touches:
+  - Better spacing and breathing room everywhere
+  - High contrast accessibility (WCAG AA minimum)
+  - Lazy-load images, optimize for speed
+  - Keep WhatsApp "Inquire" button prominent, gold, floating on mobile
+
+Please:
+1. Keep the core structure and content (navigation: HOME, COLLECTIONS, GALLERY, JOURNAL, INQUIRE; sections like MASTERPIECE RELEASE, product showcases)
+2. Rewrite/improve the CSS completely for responsiveness (use media queries + clamp + flex/grid)
+3. Add necessary JS for subtle animations, scroll reveals, hover effects
+4. Output the full updated index.html (with embedded <style> and <script> if simple) or separate files suggestion
+5. Make sure it feels regal, comforting, immersive, and elite — like a digital royal tailor experience
+
+Start by showing me the improved mobile view first, then desktop adaptations. Thank you!
