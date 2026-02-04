@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import AdminDashboard from './pages/AdminDashboard';
-import RegalStylist from './components/RegalStylist';
+/* import RegalStylist from './components/RegalStylist'; */
 import ProductDetail from './pages/ProductDetail';
 import Collections from './pages/Collections';
 import OurStory from './pages/OurStory';
@@ -69,7 +69,7 @@ const App: React.FC = () => {
 
         {renderPage()}
 
-        <RegalStylist />
+        {/* <RegalStylist /> */}
       </div>
     </CurrencyProvider>
   );
