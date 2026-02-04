@@ -218,7 +218,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack, onNaviga
             </div>
             <div className="relative h-[600px] overflow-hidden border border-[#C9A561]/10 shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&q=80&w=1000" 
+                src="https://i.postimg.cc/85zKzQ3f/Senator-Design.jpg" 
                 alt="Process" 
                 className="w-full h-full object-cover grayscale opacity-50 transition-all duration-1000 hover:grayscale-0 hover:scale-105"
               />
