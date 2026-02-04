@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marmuddy's Bespoke Fashion | Where Royalty Meets Modern Sophistication</title>
+    <meta name="description" content="Luxury bespoke fashion house specializing in African royalty and modern tailoring." />
+    
+    <!-- Critical Styles -->
+    <style>
+      :root { 
+        --bg: #0C0A08; 
+        --gold: #C9A561; 
+        --cream: #F5F2EB;
+        --burgundy: #4A1C2C;
+      }
+      body { 
+        margin: 0; 
+        background: var(--bg); 
+        color: var(--cream); 
+        font-family: 'Lato', sans-serif; 
+        overflow-x: hidden; 
+      }
+      h1, h2, h3, h4, h5, h6, .font-serif {
+        font-family: 'Cormorant Garamond', serif;
+      }
+      .font-display {
+        font-family: 'Cinzel', serif;
+      }
+      #root { min-height: 100vh; }
+      
+      /* Immersive Effects */
+      .grain-overlay {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 100;
+        background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+        opacity: 0.02;
+      }
+
+      /* African Motifs - Uli/Adire Rhythms */
+      .motif-overlay {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        background-image: radial-gradient(circle at 2px 2px, rgba(201, 165, 97, 0.05) 1px, transparent 0);
+        background-size: 40px 40px;
+        opacity: 0.5;
+      }
+      
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .scroll-reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      /* Fluid Typography */
+      .fluid-h1 { font-size: clamp(2.4rem, 8vw, 8rem); line-height: 0.95; }
+      .fluid-h2 { font-size: clamp(2rem, 6vw, 4.8rem); line-height: 1.0; }
+      .fluid-price { font-size: clamp(1.4rem, 4.5vw, 2.8rem); }
+
+      /* Subtle Metallic Sheen */
+      .gold-sheen {
+        background: linear-gradient(135deg, #C9A561 0%, #E6C98A 50%, #C9A561 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+
+      .gold-button-sheen {
+        background: linear-gradient(135deg, #C9A561 0%, #E6C98A 50%, #C9A561 100%);
+        transition: all 0.5s ease;
+      }
+      .gold-button-sheen:hover {
+        background: linear-gradient(135deg, #E6C98A 0%, #C9A561 50%, #E6C98A 100%);
+        box-shadow: 0 0 30px rgba(201, 165, 97, 0.3);
+      }
+
+      /* Commission Valuation Box */
+      .valuation-box {
+        border: 1px solid rgba(201, 165, 97, 0.3);
+        background: rgba(12, 10, 8, 0.5);
+        backdrop-filter: blur(10px);
+        padding: 1.5rem;
+        box-shadow: 0 0 20px rgba(201, 165, 97, 0.1);
+        transition: all 0.5s ease;
+      }
+      .valuation-box:hover {
+        border-color: rgba(201, 165, 97, 0.6);
+        box-shadow: 0 0 30px rgba(201, 165, 97, 0.2);
+        transform: scale(1.02);
+      }
+      
+      /* Custom scrollbar */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #0C0A08; }
+      ::-webkit-scrollbar-thumb { background: #C9A561; border-radius: 3px; }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-CAzNtunk.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-8kmdGuz0.css">
+  </head>
+  <body>
+    <div class="grain-overlay"></div>
+    <div class="motif-overlay"></div>
+    <div id="root"></div>
+  </body>
+</html>

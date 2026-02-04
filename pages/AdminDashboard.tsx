@@ -1,11 +1,13 @@
 
 import React from 'react';
-import { 
-  TrendingUp, Users, ShoppingBag, MessageSquare, 
-  Plus, Search, Edit2, Trash2, Calendar, 
+import {
+  TrendingUp, Users, ShoppingBag, MessageSquare,
+  Plus, Search, Edit2, Trash2, Calendar,
   BarChart3, Settings, LogOut, CheckCircle
 } from 'lucide-react';
+/* 
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
+*/
 import { MOCK_INQUIRIES, MOCK_COLLECTIONS, COLORS } from '../constants';
 
 const stats = [
@@ -15,6 +17,7 @@ const stats = [
   { label: 'New Clients', value: '15', change: '+8%', icon: Users },
 ];
 
+/*
 const revenueData = [
   { name: 'Jan', revenue: 400 },
   { name: 'Feb', revenue: 600 },
@@ -23,12 +26,13 @@ const revenueData = [
   { name: 'May', revenue: 1200 },
   { name: 'Jun', revenue: 900 },
 ];
+*/
 
 const AdminDashboard: React.FC = () => {
   return (
     <div className="min-h-screen bg-black pt-24 pb-12 px-6">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
-        
+
         {/* Sidebar */}
         <div className="lg:w-64 space-y-2">
           <div className="p-4 border border-zinc-800 rounded-xl mb-8">
@@ -40,7 +44,7 @@ const AdminDashboard: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           {[
             { label: 'Dashboard', icon: BarChart3, active: true },
             { label: 'Collections', icon: ShoppingBag },
@@ -49,17 +53,16 @@ const AdminDashboard: React.FC = () => {
             { label: 'Appointments', icon: Calendar },
             { label: 'Settings', icon: Settings },
           ].map((item) => (
-            <button 
+            <button
               key={item.label}
-              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm transition-colors ${
-                item.active ? 'bg-[#C9A961] text-[#0A0A0A] font-bold' : 'text-zinc-400 hover:bg-zinc-900'
-              }`}
+              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm transition-colors ${item.active ? 'bg-[#C9A961] text-[#0A0A0A] font-bold' : 'text-zinc-400 hover:bg-zinc-900'
+                }`}
             >
               <item.icon size={18} />
               {item.label}
             </button>
           ))}
-          
+
           <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-red-500 hover:bg-red-500/10 transition-colors mt-8">
             <LogOut size={18} />
             Sign Out
@@ -68,7 +71,7 @@ const AdminDashboard: React.FC = () => {
 
         {/* Main Content */}
         <div className="flex-1 space-y-8">
-          
+
           {/* Header */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <div>
@@ -98,7 +101,7 @@ const AdminDashboard: React.FC = () => {
             ))}
           </div>
 
-          {/* Charts Row */}
+          {/* Charts Row - Disabled for preview
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 bg-zinc-900 border border-zinc-800 p-6 rounded-xl">
               <h3 className="text-lg font-bold mb-6">Revenue Growth</h3>
@@ -139,6 +142,7 @@ const AdminDashboard: React.FC = () => {
               </div>
             </div>
           </div>
+          */}
 
           {/* Recent Inquiries Table */}
           <div className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">

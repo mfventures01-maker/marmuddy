@@ -6,6 +6,8 @@ import AdminDashboard from './pages/AdminDashboard';
 import RegalStylist from './components/RegalStylist';
 import ProductDetail from './pages/ProductDetail';
 import Collections from './pages/Collections';
+import OurStory from './pages/OurStory';
+import { CurrencyProvider } from './components/CurrencyToggle';
 import { ALL_PRODUCTS } from './constants';
 
 const App: React.FC = () => {
@@ -31,9 +33,10 @@ const App: React.FC = () => {
         return <AdminDashboard />;
       case 'collections':
         return <Collections onNavigate={setCurrentPage} onProductClick={navigateToProduct} />;
+      case 'our-story':
+        return <OurStory onNavigate={setCurrentPage} />;
       case 'gallery':
       case 'blog':
-      case 'about':
       case 'contact':
         return (
           <div className="pt-40 min-h-screen bg-[#0A0A0A] px-10 max-w-7xl mx-auto text-center space-y-12">
@@ -42,7 +45,7 @@ const App: React.FC = () => {
             <p className="text-zinc-600 font-serif italic text-2xl max-w-2xl mx-auto leading-relaxed">
               This editorial section is currently being curated for the next release. Experience the full Marmuddy's portfolio where artisanal legacy meets cinematic fashion.
             </p>
-            <button 
+            <button
               onClick={() => setCurrentPage('home')}
               className="px-12 py-5 bg-[#C9A961] text-[#0A0A0A] font-bold uppercase tracking-[0.5em] text-[10px] hover:bg-white transition-all shadow-2xl"
             >
@@ -60,13 +63,15 @@ const App: React.FC = () => {
   }, [currentPage, selectedProductId]);
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A] selection:bg-[#C9A961] selection:text-[#0A0A0A]">
-      <Navbar onNavigate={setCurrentPage} currentPage={currentPage} />
-      
-      {renderPage()}
-      
-      <RegalStylist />
-    </div>
+    <CurrencyProvider>
+      <div className="min-h-screen bg-[#0A0A0A] selection:bg-[#C9A961] selection:text-[#0A0A0A]">
+        <Navbar onNavigate={setCurrentPage} currentPage={currentPage} />
+
+        {renderPage()}
+
+        <RegalStylist />
+      </div>
+    </CurrencyProvider>
   );
 };
 

@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Crown, Scissors, ShoppingBag, User } from 'lucide-react';
+import { CurrencyToggle } from './CurrencyToggle';
 import { COLORS } from '../constants';
 
 interface NavbarProps {
@@ -23,8 +24,8 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
   const menuItems = [
     { label: 'Home', id: 'home' },
     { label: 'Collections', id: 'collections' },
+    { label: 'Our Story', id: 'our-story' },
     { label: 'Gallery', id: 'gallery' },
-    { label: 'Journal', id: 'blog' },
   ];
 
   const handleBookFitting = () => {
@@ -34,14 +35,13 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
   const isAdmin = currentPage === 'admin';
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        isScrolled || isMobileMenuOpen || isAdmin ? 'bg-[#0C0A08]/95 backdrop-blur-md shadow-2xl py-4' : 'bg-transparent py-8'
-      }`}
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled || isMobileMenuOpen || isAdmin ? 'bg-[#0C0A08]/95 backdrop-blur-md shadow-2xl py-4' : 'bg-transparent py-8'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Minimalistic Logo */}
-        <div 
+        <div
           className="flex items-center gap-3 cursor-pointer group"
           onClick={() => onNavigate('home')}
         >
@@ -55,20 +55,20 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-8">
           {menuItems.map((item) => (
             <button
               key={item.id}
               onClick={() => onNavigate(item.id)}
-              className={`text-[9px] font-bold uppercase tracking-[0.5em] transition-all relative group/link ${
-                currentPage === item.id ? 'text-[#C9A561]' : 'text-[#F5F2EB]/70 hover:text-[#C9A561]'
-              }`}
+              className={`text-[9px] font-bold uppercase tracking-[0.5em] transition-all relative group/link ${currentPage === item.id ? 'text-[#C9A561]' : 'text-[#F5F2EB]/70 hover:text-[#C9A561]'
+                }`}
             >
               {item.label}
               <span className={`absolute -bottom-1 left-0 h-px bg-[#C9A561] transition-all duration-500 ${currentPage === item.id ? 'w-full' : 'w-0 group-hover/link:w-full'}`} />
             </button>
           ))}
-          <button 
+          <CurrencyToggle />
+          <button
             onClick={handleBookFitting}
             className="px-8 py-3 bg-[#C9A561] text-[#0C0A08] font-bold uppercase tracking-[0.3em] text-[9px] hover:bg-[#F5F2EB] transition-all gold-button-sheen"
           >
@@ -78,13 +78,13 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
 
         {/* Mobile Toggle */}
         <div className="flex items-center gap-4 md:hidden">
-          <button 
+          <button
             onClick={handleBookFitting}
             className="px-4 py-2 bg-[#C9A961] text-[#0A0A0A] font-bold uppercase tracking-[0.2em] text-[8px] hover:bg-white transition-all"
           >
             Inquire
           </button>
-          <button 
+          <button
             className="text-[#C9A961]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -112,11 +112,11 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
             </button>
           ))}
           <div className="mt-auto pb-12 flex flex-col gap-4">
-            <button 
-               onClick={() => {
-                  handleBookFitting();
-                  setIsMobileMenuOpen(false);
-                }}
+            <button
+              onClick={() => {
+                handleBookFitting();
+                setIsMobileMenuOpen(false);
+              }}
               className="w-full py-5 bg-[#C9A961] text-[#0A0A0A] font-bold uppercase tracking-[0.4em] text-[10px] text-center"
             >
               Contact HQ
